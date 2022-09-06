@@ -1,0 +1,3 @@
+﻿  PopulationGrowthCalculator.cpp
+C:\Users\thesp\OneDrive\Programming C\Test\PopulationGrowthCalculator\PopulationGrowthCalculator\PopulationGrowthCalculator.cpp(24,28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  PopulationGrowthCalculator.vcxproj -> C:\Users\thesp\OneDrive\Programming C\Test\PopulationGrowthCalculator\Debug\PopulationGrowthCalculator.exe

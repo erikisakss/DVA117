@@ -1,0 +1,3 @@
+﻿  PopulationControl.cpp
+C:\Users\thesp\OneDrive\Programming C\Test\PopulationControl\PopulationControl\PopulationControl.cpp(11,28): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  PopulationControl.vcxproj -> C:\Users\thesp\OneDrive\Programming C\Test\PopulationControl\Debug\PopulationControl.exe
