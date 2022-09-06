@@ -49,7 +49,7 @@
 
 		scanf_s("%d", &runAgain);
 		
-
+		//Kör igen
 		while (runAgain < 0 || runAgain > 1)
 		{
 			printf("Invalid Answer, 1 = Yes, 0 = No: \n\n");
