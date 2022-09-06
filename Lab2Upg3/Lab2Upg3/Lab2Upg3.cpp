@@ -13,23 +13,22 @@
 			printf("Enter a number: ");
 			scanf_s("%d", &tal);
 			//summerar talen och räknar antal gånger loopen kör
-			if (tal > 0)
+			if (tal >= 0)
 			{
 				sum = sum + tal;
 				amount++; 
-				
-			}
-			//räknar ut maxvärdet
-			if (maxTal < tal)
-			{
-				maxTal = tal;
-				
-			}
-			//räknar ut minvärdet
-			if (minTal == -10 || minTal > tal && tal > 0)
-			{
-				minTal = tal;
-				
+				//räknar ut maxvärdet
+				if (maxTal < tal)
+				{
+					maxTal = tal;
+
+				}
+				//räknar ut minvärdet
+				if (minTal == -10 || minTal > tal)
+				{
+					minTal = tal;
+
+				}
 			}
 		}
 		//räknar ut medelvärdet
