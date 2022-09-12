@@ -6,8 +6,8 @@
 	int runAgain = 1;
 	do
 	{
-		int tal = 0, amount = 0, sum = 0, maxTal = -1, minTal = -10;
-		float medelTal;
+		int tal = 0, amount = 0, sum = 0, maxTal = 0, minTal = 0;
+		float medelTal = 0;
 		while (tal >= 0)
 		{
 			printf("Enter a number: ");
@@ -24,7 +24,7 @@
 
 				}
 				//räknar ut minvärdet
-				if (minTal == -10 || minTal > tal)
+				if (minTal == 0 || minTal > tal)
 				{
 					minTal = tal;
 
