@@ -1,3 +1,4 @@
 ﻿  Lab3Upg2.cpp
-C:\Users\thesp\OneDrive\Dokument\GitHub\DVA117\Lab3Upg2\Lab3Upg2\Lab3Upg2\Lab3Upg2.cpp(11,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Lab3Upg2.vcxproj -> C:\Users\thesp\OneDrive\Dokument\GitHub\DVA117\Lab3Upg2\Lab3Upg2\Debug\Lab3Upg2.exe
+C:\Users\thesp\OneDrive\Dokument\DVA117\Lab3Upg2\Lab3Upg2\Lab3Upg2\Lab3Upg2.cpp(11,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  LINK : C:\Users\thesp\OneDrive\Dokument\DVA117\Lab3Upg2\Lab3Upg2\Debug\Lab3Upg2.exe not found or not built by the last incremental link; performing full link
+  Lab3Upg2.vcxproj -> C:\Users\thesp\OneDrive\Dokument\DVA117\Lab3Upg2\Lab3Upg2\Debug\Lab3Upg2.exe

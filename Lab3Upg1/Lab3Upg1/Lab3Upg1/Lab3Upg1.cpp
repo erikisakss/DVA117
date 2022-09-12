@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include<stdlib.h>
 
 
 
@@ -19,17 +19,35 @@ float currencyConverter(float sek)
 	int main(void)
 	{
 
-		int sek;
-		float dollar;
+		int goAgain = 1;
+		do
+		{
 
-		printf("SEK to $ Converter\n\n");
-		printf("Enter how many SEK you want to conver to $: ");
-		scanf_s("%d", &sek);
+		
 
-		dollar = currencyConverter(sek);
+			int sek;
+			float dollar;
 
-		printf("%d SEK = %.2f$", sek, dollar);
+			printf("SEK to $ Converter\n\n");
+			printf("Enter how many SEK you want to conver to $: ");
+			scanf_s("%d", &sek);
 
+			dollar = currencyConverter(sek);
+
+			printf("%d SEK = %.2f$\n\n\n", sek, dollar);
+
+			printf("Do you want to run the converter again? 1 = Yes 0 = NO: ");
+			scanf_s("%d", &goAgain);
+
+			void clrscr();
+			{
+
+				system("@cls || clear");
+			}
+
+		} while (goAgain == 1);
+
+		
 		return 0;
 	}
 	
