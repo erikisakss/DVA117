@@ -1,0 +1,4 @@
+﻿  Lab3Upg1.cpp
+C:\Users\thesp\OneDrive\Dokument\GitHub\DVA117\Lab3Upg1\Lab3Upg1\Lab3Upg1\Lab3Upg1.cpp(10,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\thesp\OneDrive\Dokument\GitHub\DVA117\Lab3Upg1\Lab3Upg1\Lab3Upg1\Lab3Upg1.cpp(29,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Lab3Upg1.vcxproj -> C:\Users\thesp\OneDrive\Dokument\GitHub\DVA117\Lab3Upg1\Lab3Upg1\Debug\Lab3Upg1.exe
