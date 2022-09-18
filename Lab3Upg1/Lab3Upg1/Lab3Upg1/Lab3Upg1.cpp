@@ -39,11 +39,21 @@ float currencyConverter(float sek)
 			printf("Do you want to run the converter again? 1 = Yes 0 = NO: ");
 			scanf_s("%d", &goAgain);
 
+			
+
+			if (goAgain != 1 && goAgain != 0) {
+				printf("Unknown number, try again");
+				scanf_s("%d", &goAgain);
+			}
+
 			void clrscr();
 			{
 
 				system("@cls || clear");
 			}
+
+
+
 
 		} while (goAgain == 1);
 
