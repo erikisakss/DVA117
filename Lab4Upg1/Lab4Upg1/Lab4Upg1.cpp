@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+#define SIZE 10
 
 
 
@@ -16,22 +17,33 @@ void funk(int slumpf[])
 }
 
 int countElement(int inputArray[], int elementToCount) {
+	int count = 0;
+	for (int i = 0; i < SIZE; i++)
+	{
+		if (inputArray[i] == elementToCount)
+		{
+			count++;
 
 
+		}
 
 
-	return 2;
+		
+
+
+	}
+
+
+	return count;
 }
 
-
-/* https://codeforwin.org/2015/07/c-program-to-find-frequency-of-each-element-in-array.html */
 
 
 
 int main(void) {
 
 
-	int slump[10], i, searchedNumber;
+	int slump[10], i, searchedNumber, amountTime;
 	funk(slump);
 	
 	
@@ -44,7 +56,11 @@ int main(void) {
 	printf("Number you want to search for: ");
 		scanf_s("%d", &searchedNumber);
 
-		int amountTime = countElement(slump[], searchedNumber);
+
+		amountTime = countElement(slump, searchedNumber);
+
+
+		printf("The number %d was found %d times!\n", searchedNumber, amountTime);
 
 	return 0;
 }
