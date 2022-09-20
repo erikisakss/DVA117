@@ -1,0 +1,4 @@
+﻿  mone.cpp
+C:\Users\thesp\OneDrive\Dokument\GitHub\DVA117\Programming C\Test\mone\mone\mone.cpp(13,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\thesp\OneDrive\Dokument\GitHub\DVA117\Programming C\Test\mone\mone\mone.cpp(47,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  mone.vcxproj -> C:\Users\thesp\OneDrive\Dokument\GitHub\DVA117\Programming C\Test\mone\Debug\mone.exe
