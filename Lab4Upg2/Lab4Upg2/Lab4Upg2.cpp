@@ -1,35 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #define SIZE 100
 
-int palindrome(char string[]);
-
+int palindrome(char lowerCaseString[]);
+void signRemover(char string[], char fixedString[]);
+void lowerCase(char fixedString[], char lowerCaseString[]);
 int main(void) {
 
 	int returnValue;
-	char string[SIZE];
-	fgets(string, SIZE, stdin);
-	string[strlen(string) - 1] = '\0';
-	returnValue = palindrome(string);
+	char inputString[SIZE], fixedString[SIZE], lowerCaseString[SIZE];
+	fgets(inputString, SIZE, stdin);
+	signRemover(inputString, fixedString);
+	lowerCase(fixedString, lowerCaseString);
+	returnValue = palindrome(lowerCaseString);
 
 
 
 	if (returnValue != 1) {
 
-		printf("%s is NOT a palindrome", string);
+		printf("%s is NOT a palindrome", inputString);
 
 
 	}
 
 	else
 	{
-		printf("%s is a palindrome", string);
+		printf("%s is a palindrome", inputString);
 
 	}
-
-
-
 
 
 	return 0;
@@ -37,19 +37,19 @@ int main(void) {
 
 
 
-int palindrome(char string[])
+int palindrome(char lowerCaseString[])
 {
-		int i = 0, k;
-		int middle = strlen(string)/2, len = strlen(string);
+		int i = 0;
+		int middle = strlen(lowerCaseString)/2, len = strlen(lowerCaseString);
+		
 		
 
 
-
-
+		
 		for (i = 0; i < middle; i++)
 		{
 			int backwards = (len -1) - i;
-			if (string[i] != string[backwards])
+			if (lowerCaseString[i] != lowerCaseString[backwards])
 
 				return 2;
 
@@ -57,5 +57,49 @@ int palindrome(char string[])
 
 
 		return 1;
+
+}
+
+
+void signRemover(char string[], char fixedString[])
+{
+	int i, k;
+	int len = strlen(string);
+
+	for (i = 0, k = 0; i < len; i++, k++)
+	{
+
+
+		if (isalpha(string[i]) == 0)
+			i++;
+		if (string[i] == ' ')
+			i++;
+
+		fixedString[k] = string[i];
+
+	}
+
+
+
+
+}
+
+
+
+void lowerCase(char fixedString[], char lowerCaseString[])
+{
+	int i, k;
+	int len = strlen(fixedString);
+
+	for (i = 0, k = 0; i < len; i++, k++)
+	{
+		lowerCaseString[i] = tolower(fixedString[k]);
+
+
+	}
+
+
+
+	
 
 }
