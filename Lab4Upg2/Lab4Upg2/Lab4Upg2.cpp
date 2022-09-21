@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#define SIZE 100
+#define SIZE 300
 
 int palindrome(char lowerCaseString[]);
 void signRemover(char string[], char fixedString[]);
@@ -80,7 +80,7 @@ void signRemover(char string[], char fixedString[])
 	}
 
 
-
+	fixedString[k] = '\0';
 
 }
 
@@ -89,7 +89,7 @@ void signRemover(char string[], char fixedString[])
 void lowerCase(char fixedString[], char lowerCaseString[])
 {
 	int i, k;
-	int len = strlen(fixedString);
+	int len = strlen(fixedString)+ 1;
 
 	for (i = 0, k = 0; i < len; i++, k++)
 	{
@@ -99,7 +99,7 @@ void lowerCase(char fixedString[], char lowerCaseString[])
 	}
 
 
-
+	
 	
 
 }
