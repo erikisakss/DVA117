@@ -1,8 +1,10 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 #define SIZE 300
+
 
 int palindrome(char lowerCaseString[]);
 void signRemover(char string[], char fixedString[]);
@@ -11,7 +13,8 @@ int main(void) {
 
 	int returnValue;
 	char inputString[SIZE], fixedString[SIZE], lowerCaseString[SIZE];
-	fgets(inputString, SIZE, stdin);
+	//fgets(inputString, SIZE, stdin);
+	scanf("%[^\n]s", inputString);
 	signRemover(inputString, fixedString);
 	lowerCase(fixedString, lowerCaseString);
 	returnValue = palindrome(lowerCaseString);
@@ -89,7 +92,7 @@ void signRemover(char string[], char fixedString[])
 void lowerCase(char fixedString[], char lowerCaseString[])
 {
 	int i, k;
-	int len = strlen(fixedString)+ 1;
+	int len = strlen(fixedString) + 1;
 
 	for (i = 0, k = 0; i < len; i++, k++)
 	{
@@ -98,6 +101,13 @@ void lowerCase(char fixedString[], char lowerCaseString[])
 
 	}
 
+	if (lowerCaseString[len-1] == '\n')
+	{
+		lowerCaseString[len-1] = '\0';
+
+
+
+	}
 
 	
 	
