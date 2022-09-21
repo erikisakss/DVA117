@@ -10,7 +10,7 @@ int randomizer(int number)
 
     srand(time(0));
     int randomizedNumber = rand();
-    int slump = randomizedNumber % 100 + 1;
+    int slump = randomizedNumber % (100 + 1 -1) + 1;
 
 
 
@@ -31,7 +31,7 @@ int main(void)
 
    
 
-    printf("Guess a number between 0 and 100: ");
+    printf("Guess a number between 1 and 100: ");
     scanf_s("%d", &guess);
     amount++;
 
@@ -42,7 +42,7 @@ int main(void)
 
     }
 
-    if (guess < random && guess >= 0)
+    if (guess < random && guess >= 1)
     {
 
         printf("Too low!\n");
@@ -55,7 +55,7 @@ int main(void)
     }
 
 
-    if (guess < 0 || guess > 100)
+    if (guess < 1 || guess > 100)
     {
         printf("Not in the interval try again!\n");
     }
