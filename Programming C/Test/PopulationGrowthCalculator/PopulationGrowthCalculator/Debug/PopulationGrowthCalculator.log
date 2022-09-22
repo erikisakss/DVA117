@@ -1,3 +1,4 @@
 ﻿  PopulationGrowthCalculator.cpp
-C:\Users\thesp\OneDrive\Programming C\Test\PopulationGrowthCalculator\PopulationGrowthCalculator\PopulationGrowthCalculator.cpp(24,28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  PopulationGrowthCalculator.vcxproj -> C:\Users\thesp\OneDrive\Programming C\Test\PopulationGrowthCalculator\Debug\PopulationGrowthCalculator.exe
+C:\Users\thesp\OneDrive\Dokument\GitHub\DVA117\Programming C\Test\PopulationGrowthCalculator\PopulationGrowthCalculator\PopulationGrowthCalculator.cpp(24,28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  LINK : C:\Users\thesp\OneDrive\Dokument\GitHub\DVA117\Programming C\Test\PopulationGrowthCalculator\Debug\PopulationGrowthCalculator.exe not found or not built by the last incremental link; performing full link
+  PopulationGrowthCalculator.vcxproj -> C:\Users\thesp\OneDrive\Dokument\GitHub\DVA117\Programming C\Test\PopulationGrowthCalculator\Debug\PopulationGrowthCalculator.exe
