@@ -13,7 +13,6 @@ int main(void) {
 
 	int returnValue;
 	char inputString[SIZE], fixedString[SIZE], lowerCaseString[SIZE];
-	//fgets(inputString, SIZE, stdin);
 	scanf("%[^\n]s", inputString);
 	signRemover(inputString, fixedString);
 	lowerCase(fixedString, lowerCaseString);
@@ -101,15 +100,7 @@ void lowerCase(char fixedString[], char lowerCaseString[])
 
 	}
 
-	if (lowerCaseString[len-1] == '\n')
-	{
-		lowerCaseString[len-1] = '\0';
 
-
-
-	}
-
-	
 	
 
 }
