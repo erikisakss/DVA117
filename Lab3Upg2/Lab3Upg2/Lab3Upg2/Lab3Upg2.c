@@ -7,16 +7,13 @@
 int randomizer(int number)
 {
     int slump;
-    int len = 100;
     srand(time(0));
 
 
-    for (int i = 0; i < len; i++) {
+    
         int randomizedNumber = rand();
-        slump = randomizedNumber % (100 + 1 - 1) + 1;
-
-        printf("%d\n", slump);
-    }
+        slump = randomizedNumber % 100  + 1;
+    
     return slump;
 
 }

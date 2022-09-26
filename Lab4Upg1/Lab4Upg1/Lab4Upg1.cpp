@@ -4,12 +4,12 @@
 #define SIZE 10
 
 
-void funk(int slumpf[])
+void randomNumbers(int slumpf[])
 {
 
 	int i;
 	srand(time(NULL));
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < SIZE; i++)
 		slumpf[i] = rand() % 10 + 1;
 
 }
@@ -31,10 +31,10 @@ int countElement(int inputArray[], int elementToCount) {
 
 int main(void) {
 
-	int slump[10], i, searchedNumber, amountTime;
-	funk(slump);
+	int slump[SIZE], i, searchedNumber, amountTime;
+	randomNumbers(slump);
 	
-	for (i = 0; i < 10; i++) {
+	for (i = 0; i < SIZE; i++) {
 		printf("Random Number: %d\n", slump[i]);
 
 	}

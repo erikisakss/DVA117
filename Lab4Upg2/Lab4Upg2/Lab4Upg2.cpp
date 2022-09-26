@@ -11,28 +11,48 @@ void signRemover(char string[], char fixedString[]);
 void lowerCase(char fixedString[], char lowerCaseString[]);
 int main(void) {
 
-	int returnValue;
-	char inputString[SIZE], fixedString[SIZE], lowerCaseString[SIZE];
-	scanf("%[^\n]s", inputString);
-	signRemover(inputString, fixedString);
-	lowerCase(fixedString, lowerCaseString);
-	returnValue = palindrome(lowerCaseString);
+	int runAgain = 0;
 
+	
 
+	
 
-	if (returnValue != 1) {
+	
 
-		printf("%s is NOT a palindrome", inputString);
-
-
-	}
-
-	else
+		int returnValue;
+		char inputString[SIZE], fixedString[SIZE], lowerCaseString[SIZE];
+	
+	do
 	{
-		printf("%s is a palindrome", inputString);
+		printf("Enter a palindrome: \n");
+		scanf("%[^\n]s", inputString);
+		while (getchar() != '\n');
+		signRemover(inputString, fixedString);
+		lowerCase(fixedString, lowerCaseString);
+		returnValue = palindrome(lowerCaseString);
 
-	}
 
+
+		if (returnValue != 1) {
+
+			printf("%s is NOT a palindrome\n", inputString);
+
+
+		}
+
+		else
+		{
+			printf("%s is a palindrome\n", inputString);
+
+		}
+
+		
+		printf("Would you like to run again? 1 = YES 0 = NO\n");
+		scanf_s("%d", &runAgain);
+		while (getchar() != '\n');
+
+	} while (runAgain == 1);
+		
 
 	return 0;
 }
