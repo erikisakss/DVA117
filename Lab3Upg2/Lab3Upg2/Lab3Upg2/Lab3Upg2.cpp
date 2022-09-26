@@ -4,19 +4,17 @@
 
 
 
-int randomizer(int number)
+int randomizer()
 {
     int slump;
-    int len = 100;
     srand(time(0));
 
 
-    for (int i = 0; i < len; i++) {
         int randomizedNumber = rand();
-        slump = randomizedNumber % (100 + 1 - 1) + 1;
+        slump = randomizedNumber % 100 + 1;
         
-        printf("%d\n", slump);
-    }
+ 
+    
     return slump;
 
 }
@@ -26,7 +24,7 @@ int main(void)
    
     int guess, random = 0, amount = 0;
     
-    random = randomizer(random);
+    random = randomizer();
 
 
     do

@@ -33,21 +33,20 @@ int main(void) {
 
 	int slump[SIZE], i, searchedNumber, amountTime;
 	randomNumbers(slump);
-	
+
 	for (i = 0; i < SIZE; i++) {
 		printf("Random Number: %d\n", slump[i]);
 
 	}
 
 	printf("Number you want to search for: ");
-		scanf_s("%d", &searchedNumber);
+	scanf_s("%d", &searchedNumber);
 
-		amountTime = countElement(slump, searchedNumber);
+	amountTime = countElement(slump, searchedNumber);
 
-		printf("The number %d was found %d times!\n", searchedNumber, amountTime);
+	printf("The number %d was found %d times!\n", searchedNumber, amountTime);
 
 	return 0;
 }
-
 
 

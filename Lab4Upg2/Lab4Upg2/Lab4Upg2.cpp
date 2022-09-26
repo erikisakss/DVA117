@@ -13,12 +13,6 @@ int main(void) {
 
 	int runAgain = 0;
 
-	
-
-	
-
-	
-
 		int returnValue;
 		char inputString[SIZE], fixedString[SIZE], lowerCaseString[SIZE];
 	

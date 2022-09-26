@@ -4,7 +4,7 @@
 
 
 
-int randomizer(int number)
+int randomizer(void)
 {
     int slump;
     srand(time(0));
@@ -23,7 +23,7 @@ int main(void)
 
     int guess, random = 0, amount = 0;
 
-    random = randomizer(random);
+    random = randomizer();
 
 
     do
