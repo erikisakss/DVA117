@@ -82,17 +82,17 @@ void signRemover(char string[], char fixedString[])
 	int i, k;
 	int len = strlen(string);
 
-	for (i = 0, k = 0; i < len; i++, k++)
+	for (i = 0, k = 0; i < len; i++)
 	{
 
 
-		if (isalpha(string[i]) == 0)
-			i++;
+		if (isalpha(string[i])== 0)
+			continue;
 		if (string[i] == ' ')
-			i++;
+			continue;
 
 		fixedString[k] = string[i];
-
+		k++;
 	}
 
 
