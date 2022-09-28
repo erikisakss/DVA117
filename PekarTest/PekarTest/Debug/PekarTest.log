@@ -1,0 +1,3 @@
+﻿  PekarTest.cpp
+C:\Users\thesp\OneDrive\Dokument\DVA117\PekarTest\PekarTest\PekarTest.cpp(25,15): warning C4305: '=': truncation from 'double' to 'float'
+  PekarTest.vcxproj -> C:\Users\thesp\OneDrive\Dokument\DVA117\PekarTest\Debug\PekarTest.exe
