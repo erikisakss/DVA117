@@ -1,3 +1,4 @@
-﻿  Lab5Upg1.cpp
-C:\Users\thesp\OneDrive\Dokument\GitHub\DVA117Real\DVA117\Lab5Upg1\Lab5Upg1\Lab5Upg1.cpp(49,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+﻿  Lab5Upg1.c
+C:\Users\thesp\OneDrive\Dokument\GitHub\DVA117Real\DVA117\Lab5Upg1\Lab5Upg1\Lab5Upg1.c(49,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+Debug\Lab5Upg1.obj : warning LNK4042: object specified more than once; extras ignored
   Lab5Upg1.vcxproj -> C:\Users\thesp\OneDrive\Dokument\GitHub\DVA117Real\DVA117\Lab5Upg1\Debug\Lab5Upg1.exe
