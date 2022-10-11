@@ -1,0 +1,8 @@
+﻿  ShoppingList.c
+C:\Users\thesp\OneDrive\Dokument\DVA117\Lab6\Lab6\ShoppingList.c(22,67): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+C:\Users\thesp\OneDrive\Dokument\DVA117\Lab6\Lab6\ShoppingList.c(92,67): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+C:\Users\thesp\OneDrive\Dokument\DVA117\Lab6\Lab6\ShoppingList.c(99,67): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+C:\Users\thesp\OneDrive\Dokument\DVA117\Lab6\Lab6\ShoppingList.c(105,67): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+C:\Users\thesp\OneDrive\Dokument\DVA117\Lab6\Lab6\ShoppingList.c(111,67): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+C:\Users\thesp\OneDrive\Dokument\DVA117\Lab6\Lab6\ShoppingList.c(117,67): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+  Lab6.vcxproj -> C:\Users\thesp\OneDrive\Dokument\DVA117\Lab6\Debug\Lab6.exe
