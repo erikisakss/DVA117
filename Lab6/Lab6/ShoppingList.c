@@ -128,7 +128,51 @@ void editItem(struct ShoppingList *list)
 
 void removeItem(struct ShoppingList *list)
 {
+    /*     inmatat nummer -1 för att nå rätt index, sätt det indexet till \0
+    *      kopiera [4] -> [3] -> [2] -> [1] -> [0] begränsa med *list->length
+    */
+    int removeItem;
+    if (list->length == 0)
+    {
+        puts("No items in cart!");
+    }
+    for (int i = 0; i < list->length; i++) {
+        printf("%d.  %s   ||    %.2f    ||    %s\n", i + 1, list->itemList[i].productName, list->itemList[i].amount, list->itemList[i].unit);
 
+
+    }
+    printf("Select item to remove: ");
+    do
+    {
+        printf("Select item to remove: ");
+        scanf_s("%d", &removeItem);
+
+
+        if (list->length < removeItem || removeItem < 0)
+        {
+            printf("Number %d does not exist in the list!\n", removeItem);
+        }
+
+
+    } while (removeItem < 0 || removeItem > list->length);
+   
+    if (removeItem != 5 ||removeItem <list->length )
+    {
+
+
+        for (int i = removeItem; i < list->length; i++)
+        {
+
+            list->itemList[i - 1] = list->itemList[i];
+        }
+        list->length = list->length - 1;
+    }
+
+    if (removeItem == 5)
+    {
+        list->length = list->length - 1;
+    }
+    
 }
 
 /*saveList och loadList implementeras i laboration 7*/
