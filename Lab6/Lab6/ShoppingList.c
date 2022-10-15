@@ -141,7 +141,7 @@ void removeItem(struct ShoppingList *list)
 
 
     }
-    printf("Select item to remove: ");
+    
     do
     {
         printf("Select item to remove: ");
