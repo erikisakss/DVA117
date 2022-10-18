@@ -45,13 +45,13 @@ void printList(struct ShoppingList *list)
 {
     if (list->length == 0)
     {
-        puts("No items in cart!");
+        printf("No items in cart!");
     }
 
     
     for (int i = 0; i < list->length; i++) {
-        printf("%d.  %s   ||    %.2f    ||    %s\n", i + 1, list->itemList[i].productName, list->itemList[i].amount, list->itemList[i].unit);
-
+        printf("%d.  %-20s\t %.2f\t %s\n", i + 1, list->itemList[i].productName, list->itemList[i].amount, list->itemList[i].unit);
+        
        
     }
 
@@ -65,114 +65,102 @@ void editItem(struct ShoppingList *list)
 
     if (list->length == 0)
     {
-        puts("No items in cart!");
+        printf("No items in cart!");
         
     }
-
    
     for (int i = 0; i < list->length; i++) {
-        printf("%d.  %s   ||    %.2f    ||    %s\n", i + 1, list->itemList[i].productName, list->itemList[i].amount, list->itemList[i].unit);
+        printf("%d.  %-20s\t %.2f\t %s\n", i + 1, list->itemList[i].productName, list->itemList[i].amount, list->itemList[i].unit);
 
 
     }
-    do
+
+    if (list->length > 0)
     {
 
-   
-    puts("Select which item to edit: ");
-    scanf("%d", &editAmount);
-    } while (editAmount > list->length);
-    switch (editAmount)
-    {
-    case 1: 
-        printf("Edit amount of %s: ", list->itemList[0].productName);
-        do
-        {
-            scanf("%f", &list->itemList[0].amount);
-        } while (noNegativeNumbersAllowed(list->itemList[0].amount) == false); break;
 
-    case 2:
-        printf("Edit amount of %s: ", list->itemList[1].productName);
         do
         {
-            scanf("%f", &list->itemList[1].amount);
-        } while (noNegativeNumbersAllowed(list->itemList[1].amount) == false); break;
-    case 3:
-        printf("Edit amount of %s: ", list->itemList[2].productName);
+
+
+            printf("Select which item to edit: ");
+            scanf("%d", &editAmount);
+
+
+            if (list->length < editAmount|| editAmount < 0)
+            {
+                printf("Number %d does not exist in the list!\n", editAmount);
+            }
+
+
+        } while (editAmount > list->length || editAmount < 0);
+
+       
         do
         {
-            scanf("%f", &list->itemList[2].amount);
-        } while (noNegativeNumbersAllowed(list->itemList[2].amount) == false); break;
-    case 4:
-        printf("Edit amount of %s: ", list->itemList[3].productName);
-        do
-        {
-            scanf("%f", &list->itemList[3].amount);
-        } while (noNegativeNumbersAllowed(list->itemList[3].amount) == false); break;
-    case 5:
-        printf("Edit amount of %s: ", list->itemList[4].productName);
-        do
-        {
-            scanf("%f", &list->itemList[4].amount);
-        } while (noNegativeNumbersAllowed(list->itemList[4].amount) == false); break;
-    default:
-        printf("No negative numbers! Try again:");
-        
-        break;
+            printf("Edit amount of %s: ", list->itemList[editAmount - 1].productName);
+            scanf("%f", &list->itemList[editAmount - 1].amount);
+        } while (noNegativeNumbersAllowed(list->itemList[editAmount - 1].amount) == false);
+
+
+
+
     }
-
-
 
 
 }
 
 void removeItem(struct ShoppingList *list)
 {
-    /*     inmatat nummer -1 för att nå rätt index, sätt det indexet till \0
-    *      kopiera [4] -> [3] -> [2] -> [1] -> [0] begränsa med *list->length
-    */
     int removeItem;
     if (list->length == 0)
     {
         puts("No items in cart!");
     }
     for (int i = 0; i < list->length; i++) {
-        printf("%d.  %s   ||    %.2f    ||    %s\n", i + 1, list->itemList[i].productName, list->itemList[i].amount, list->itemList[i].unit);
+        printf("%d.  %-20s\t %.2f\t %s\n", i + 1, list->itemList[i].productName, list->itemList[i].amount, list->itemList[i].unit);
 
 
     }
+<<<<<<< Updated upstream
     
     do
+=======
+    if (list->length > 0)
+>>>>>>> Stashed changes
     {
-        printf("Select item to remove: ");
-        scanf_s("%d", &removeItem);
-
-
-        if (list->length < removeItem || removeItem < 0)
+        //Do-While kör tills användaren matar in ett positivt tal, talet måste vara inom intervallet
+        do
         {
-            printf("Number %d does not exist in the list!\n", removeItem);
-        }
+            printf("Select item to remove: ");
+            scanf_s("%d", &removeItem);
 
 
-    } while (removeItem < 0 || removeItem > list->length);
-   
-    if (removeItem != 5 ||removeItem <list->length )
-    {
+            if (list->length < removeItem || removeItem < 0)
+            {
+                printf("Number %d does not exist in the list!\n", removeItem);
+            }
 
 
-        for (int i = removeItem; i < list->length; i++)
+        } while (removeItem < 0 || removeItem > list->length);
+        //Kopierar över alla värden så länge värdet inte är 5 eller större än list->length, minskar sedan length med 1
+        if (removeItem != 5 || removeItem < list->length)
         {
 
-            list->itemList[i - 1] = list->itemList[i];
-        }
-        list->length = list->length - 1;
-    }
 
-    if (removeItem == 5)
-    {
-        list->length = list->length - 1;
+            for (int i = removeItem; i < list->length; i++)
+            {
+
+                list->itemList[i - 1] = list->itemList[i];
+            }
+            list->length = list->length - 1;
+        }
+        //Om värdet är 5 minskar length med 1
+        if (removeItem == 5)
+        {
+            list->length = list->length - 1;
+        }
     }
-    
 }
 
 /*saveList och loadList implementeras i laboration 7*/
@@ -186,6 +174,7 @@ void loadList(struct ShoppingList* list)
     
 }
 
+//Kollar om talet är negativt
 bool noNegativeNumbersAllowed(int number) {
 
     if (number < 0)

@@ -3,7 +3,7 @@
 #define SHOPPING_LIST_H
 /*Här lägger du eventuella makrodefinitioner*/
 #define MAX 100
-
+#define MAXNAME 20
 // Struct definitions
 
 /*Deluppgift 3 - definiera dina strukter här.           *
@@ -15,7 +15,7 @@
  *och köra programmet, ingenting kommer dock att hända  *
  *när du gör val i menyn.                               */
 struct GroceryItem {
-	char productName[MAX];
+	char productName[MAXNAME];
 	float amount;
 	char unit[MAX];
 
