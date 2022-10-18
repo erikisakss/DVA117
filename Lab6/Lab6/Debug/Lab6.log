@@ -1,18 +1,2 @@
-<<<<<<< Updated upstream
-﻿  main.c
-  ShoppingList.c
-C:\Users\thesp\OneDrive\Dokument\DVA117\Lab6\Lab6\ShoppingList.c(22,67): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\thesp\OneDrive\Dokument\DVA117\Lab6\Lab6\ShoppingList.c(92,67): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\thesp\OneDrive\Dokument\DVA117\Lab6\Lab6\ShoppingList.c(99,67): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\thesp\OneDrive\Dokument\DVA117\Lab6\Lab6\ShoppingList.c(105,67): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\thesp\OneDrive\Dokument\DVA117\Lab6\Lab6\ShoppingList.c(111,67): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\thesp\OneDrive\Dokument\DVA117\Lab6\Lab6\ShoppingList.c(117,67): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-  Generating Code...
-  LINK : C:\Users\thesp\OneDrive\Dokument\DVA117\Lab6\Debug\Lab6.exe not found or not built by the last incremental link; performing full link
-  Lab6.vcxproj -> C:\Users\thesp\OneDrive\Dokument\DVA117\Lab6\Debug\Lab6.exe
-=======
 ﻿  ShoppingList.c
-C:\Users\thesp\OneDrive\Dokument\GitHub\DVA117Real\DVA117\Lab6\Lab6\ShoppingList.c(22,67): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\thesp\OneDrive\Dokument\GitHub\DVA117Real\DVA117\Lab6\Lab6\ShoppingList.c(103,80): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
   Lab6.vcxproj -> C:\Users\thesp\OneDrive\Dokument\GitHub\DVA117Real\DVA117\Lab6\Debug\Lab6.exe
->>>>>>> Stashed changes

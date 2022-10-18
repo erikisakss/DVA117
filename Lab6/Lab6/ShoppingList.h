@@ -42,7 +42,7 @@ void editItem(struct ShoppingList *list);
 void removeItem(struct ShoppingList *list);
 void saveList(struct ShoppingList *list); //implementeras i laboration 7
 void loadList(struct ShoppingList* list); //implementeras i laboration 7
-bool noNegativeNumbersAllowed(int number);
+bool noNegativeNumbersAllowed(float number);
 
 
 #endif
