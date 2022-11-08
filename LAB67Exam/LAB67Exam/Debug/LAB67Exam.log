@@ -1,0 +1,8 @@
+﻿  ShoppingList.c
+C:\Users\thesp\OneDrive\Dokument\DVA117\LAB67Exam\LAB67Exam\ShoppingList.c(182,49): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\thesp\OneDrive\Dokument\DVA117\LAB67Exam\LAB67Exam\ShoppingList.c(313,19): warning C4133: 'function': incompatible types - from 'int [5]' to 'char *'
+C:\Users\thesp\OneDrive\Dokument\DVA117\LAB67Exam\LAB67Exam\ShoppingList.c(314,30): warning C4133: 'function': incompatible types - from 'int [5]' to 'const char *'
+C:\Users\thesp\OneDrive\Dokument\DVA117\LAB67Exam\LAB67Exam\ShoppingList.c(355,19): warning C4133: 'function': incompatible types - from 'int [5]' to 'char *'
+C:\Users\thesp\OneDrive\Dokument\DVA117\LAB67Exam\LAB67Exam\ShoppingList.c(356,30): warning C4133: 'function': incompatible types - from 'int [5]' to 'const char *'
+C:\Users\thesp\OneDrive\Dokument\DVA117\LAB67Exam\LAB67Exam\ShoppingList.c(280,22): warning C4101: 'temp': unreferenced local variable
+  LAB67Exam.vcxproj -> C:\Users\thesp\OneDrive\Dokument\DVA117\LAB67Exam\Debug\LAB67Exam.exe
