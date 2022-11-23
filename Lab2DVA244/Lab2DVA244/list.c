@@ -11,8 +11,20 @@
   Den nya noden (eller NULL) returneras.*/
 static struct node* createListNode(const Data data)
 {
+
+    struct node* newNode = (struct node*)malloc(sizeof(struct node));
+    if (newNode != NULL)
+    {
+        newNode->data = data;
+        return newNode;
+    }
+    else
+    {
+        printf("Memory allocation failed!");
+        return NULL;
+    }
     //Glom inte att testa sa att allokeringen lyckades innan du initierar noden
-    return 0; //Ersatt med ratt returvarde
+     //Ersatt med ratt returvarde
 }
 
 /*Returnera en tom lista - funktionen ar fardig*/
@@ -26,13 +38,44 @@ List createEmptyList(void)
   Returnerar 1 om den Šr tom, annars 0*/
 int isEmpty(const List list)
 {
-    return 0; //ersatt med ratt returvarde
+    if (list==NULL)
+    {
+        return 1;
+    }
+
+    else
+    {
+        return 0;
+    }
+    
 }
 
 /*Lagg till nod forst i listan*/
 /*Postcondition: Det nya datat ligger forst i listan (testa med assert)*/
 void addFirst(List *list, const Data data)
 {
+
+
+    struct node* newNode = createListNode(data);
+
+    if (newNode != NULL)
+    {
+        if (*list == NULL)
+        {
+            *list = newNode;
+            assert(data == (*list)->data);
+            
+        }
+        else
+        {
+            newNode->next = *list;
+            *list = newNode;
+            assert(data == (*list)->data);
+        }
+       
+
+    }
+
     //Anropa createListNode for att skapa den nya noden
     //Glom inte att testa att den nya noden faktiskt kunde skapas/tilldelas minne innan du fortsatter
     //Tank pa att listan kan vara tom nar en ny nod laggs till
@@ -42,6 +85,19 @@ void addFirst(List *list, const Data data)
   Tips, nar du hittat ratt plats kan du anvanda funktionen addFirst for att lagga till*/
 void addLast(List *list, const Data data)
 {
+    struct node* newNode = createListNode(data);
+    
+
+    if (*list == NULL)
+    {
+        *list = newNode;
+    }
+
+    else
+    {
+        newNode->next = NULL;
+    }
+
     
 }
 
