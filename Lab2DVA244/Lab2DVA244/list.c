@@ -12,25 +12,26 @@
 static struct node* createListNode(const Data data)
 {
 
-    struct node* newNode = (struct node*)malloc(sizeof(struct node));
-    if (newNode != NULL)
-    {
-        newNode->data = data;
-        return newNode;
-    }
-    else
-    {
-        printf("Memory allocation failed!");
-        return NULL;
-    }
-    //Glom inte att testa sa att allokeringen lyckades innan du initierar noden
-     //Ersatt med ratt returvarde
+	struct node* newNode = (struct node*)malloc(sizeof(struct node));
+	if (newNode != NULL)
+	{
+		newNode->next = NULL;
+		newNode->data = data;
+		return newNode;
+	}
+	else
+	{
+		printf("Memory allocation failed!");
+		return NULL;
+	}
+	//Glom inte att testa sa att allokeringen lyckades innan du initierar noden
+	 //Ersatt med ratt returvarde
 }
 
 /*Returnera en tom lista - funktionen ar fardig*/
 List createEmptyList(void)
 {
-    return NULL;
+	return NULL;
 }
 
 
@@ -38,92 +39,128 @@ List createEmptyList(void)
   Returnerar 1 om den Šr tom, annars 0*/
 int isEmpty(const List list)
 {
-    if (list==NULL)
-    {
-        return 1;
-    }
+	if (list == NULL)
+	{
+		return 1;
+	}
 
-    else
-    {
-        return 0;
-    }
-    
+	else
+	{
+		return 0;
+	}
+
 }
 
 /*Lagg till nod forst i listan*/
 /*Postcondition: Det nya datat ligger forst i listan (testa med assert)*/
-void addFirst(List *list, const Data data)
+void addFirst(List* list, const Data data)
 {
 
 
-    struct node* newNode = createListNode(data);
+	struct node* newNode = createListNode(data);
 
-    if (newNode != NULL)
-    {
-        if (*list == NULL)
-        {
-            *list = newNode;
-            assert(data == (*list)->data);
-            
-        }
-        else
-        {
-            newNode->next = *list;
-            *list = newNode;
-            assert(data == (*list)->data);
-        }
-       
+	if (newNode != NULL)
+	{
+		if (*list == NULL)
+		{
+			*list = newNode;
+			assert(data == (*list)->data);
 
-    }
+		}
+		else
+		{
+			newNode->next = *list;
+			*list = newNode;
+			assert(data == (*list)->data);
+		}
 
-    //Anropa createListNode for att skapa den nya noden
-    //Glom inte att testa att den nya noden faktiskt kunde skapas/tilldelas minne innan du fortsatter
-    //Tank pa att listan kan vara tom nar en ny nod laggs till
+
+	}
+
+	//Anropa createListNode for att skapa den nya noden
+	//Glom inte att testa att den nya noden faktiskt kunde skapas/tilldelas minne innan du fortsatter
+	//Tank pa att listan kan vara tom nar en ny nod laggs till
 }
 
 /*Lagg till nod sist i listan
   Tips, nar du hittat ratt plats kan du anvanda funktionen addFirst for att lagga till*/
-void addLast(List *list, const Data data)
+void addLast(List* list, const Data data)
 {
-    struct node* newNode = createListNode(data);
-    
+	struct node* newNode = createListNode(data);
+	struct node* temp = *list;
 
-    if (*list == NULL)
-    {
-        *list = newNode;
-    }
+	if (*list == NULL)
+	{
+		*list = newNode;
+	}
 
-    else
-    {
-        newNode->next = NULL;
-    }
+	else
+	{
 
-    
+		while (temp->next != NULL)
+		{
+			temp = temp->next;
+
+
+		}
+
+
+		temp->next = newNode;
+
+
+
+	}
+
+
 }
 
 /*Ta bort forsta noden i listan
   Precondition: listan ar inte tom (testa med assert)
   Noden ska lankas ur och minnet frigoras, resten av listan ska finnas kvar*/
-void removeFirst(List *list)
+void removeFirst(List* list)
 {
-    //Glom inte att frigora minnet for den nod som lankas ur listan.
-    //Tank pa att listans huvud efter bortlankningen maste peka pa den nod som nu ar forst.
+	assert(*list != NULL);
+
+	struct node* temp = *list;
+
+	*list = (*list)->next;
+	free(temp);
+
+	//Glom inte att frigora minnet for den nod som lankas ur listan.
+	//Tank pa att listans huvud efter bortlankningen maste peka pa den nod som nu ar forst.
 }
 
 /*Ta bort sista noden i listan
   Precondition: listan ar inte tom (testa med assert)t*/
-void removeLast(List *list)
+void removeLast(List* list)
 {
-    //Glom inte att frigora minnet for den nod som lankas ur listan.
-    //Tank pa att den nod som nu ar sist inte pekar nagonstans, dess pekare maste nollstallas
+	assert(*list != NULL);
+	struct node* temp = *list;
+	struct node* previous = temp;
+
+	while (temp->next != NULL)
+	{
+		previous = temp;
+		temp = temp->next;
+	}
+	previous->next = NULL;
+	free(temp);
+
+
+
+	//Glom inte att frigora minnet for den nod som lankas ur listan.
+	//Tank pa att den nod som nu ar sist inte pekar nagonstans, dess pekare maste nollstallas
 }
 
 /*Ta bort data ur listan (forsta forekomsten)
   Returnera 1 om datat finns, annars 0
   Tips, nar du hittar ratt nod kan du anvanda en av de ovanstaende funktionerna for att ta bort noden*/
-int removeElement(List *list, const Data data)
+int removeElement(List* list, const Data data)
 {
-    return 0; //Ersatt med ratt returvarde
+
+
+
+	return 0; //Ersatt med ratt returvarde
 }
 
 /*Finns data i listan?
@@ -131,42 +168,88 @@ int removeElement(List *list, const Data data)
   Tank pa att listan kan vara tom*/
 int search(const List list, const Data data)
 {
-    return 0; //Ersatt med ratt returvarde
+	while (list->next != NULL)
+	{
+		if (list->data == data)
+		{
+			return 1;
+		}
+
+		else
+		{
+			return 0;
+		}
+
+	}
+
+
+
+	return 0; //Ersatt med ratt returvarde
 }
 
 /*Returnera antalet noder i listan*/
 int numberOfNodesInList(const List list)
 {
-    return 0; //Ersatt med ratt returvarde
+
+	List temp = list;
+	int count = 0;
+
+	while (temp)
+	{
+		count++;
+		temp = temp->next;
+	}
+
+	return count;
+
+
 }
 
 /*Ta bort alla noder ur listan
   Glom inte att frigora minnet
   Postcondition: Listan ar tom, *list Šr NULL (testa med assert)*/
-void clearList(List *list)
+void clearList(List* list)
 {
-    //Alla noder maste tas avallokeras en och en, det racker inte att endast frigora list.
+	//Alla noder maste tas avallokeras en och en, det racker inte att endast frigora list.
 }
 
 /*Skriv ut listan
   Vid anropet kan man ange stdout som argument 2 for att skriva ut pŒ skarmen.
   Anvanda fprintf for att skriva ut.
   Den har typen av utskriftfunktion blir mer generell da man kan valja att skriva ut till skarmen eller till fil.*/
-void printList(const List list, FILE *textfile)
+void printList(const List list, FILE* textfile)
 {
-    
+
 }
 
 /*Returnera forsta datat i listan
   Precondition: listan ar inte tom (testa med assert)*/
 Data getFirstElement(const List list)
 {
-    return 0; //Ersatt med ratt returvarde
+	assert(list != NULL);
+
+	int firstValue = list->data;
+
+	return firstValue; //Ersatt med ratt returvarde
 }
 
 /*Returnera sista datat i listan
   Precondition: listan ar inte tom (testa med assert)*/
 Data getLastElement(const List list)
 {
-    return 0; //Ersatt med ratt returvarde
+	assert(list != NULL);
+	int lastValue = 0;
+
+	while (list->next != NULL)
+	{
+		if (list->next == NULL)
+		{
+			lastValue = list->next->data;
+		}
+
+
+	}
+
+
+	return lastValue; //Ersatt med ratt returvarde
 }
